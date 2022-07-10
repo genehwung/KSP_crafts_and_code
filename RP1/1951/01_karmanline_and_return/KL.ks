@@ -12,7 +12,7 @@ lock throttle to 1.
 stage.
 
 // Wait until the dynamic Q is small enough to stage.
-wait until verticalspeed > 160.
+wait until availablethrust < 1.
 wait until verticalspeed < 150.
 // Use the decouper as a ulage.
 stage.

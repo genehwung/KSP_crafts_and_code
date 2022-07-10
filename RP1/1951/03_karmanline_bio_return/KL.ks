@@ -1,5 +1,4 @@
-// Karman line flight for sounding rocket.
-// Three stages launch, two stages seperations and parachute arm.
+// Karman Line.
 run util.
 run globals_util.
 
@@ -14,24 +13,16 @@ stage.
 
 // Wait until the dynamic Q is small enough to stage.
 wait until availablethrust < 1.
-wait until verticalspeed < 125.
-stage.
-// Wait until the dynamic Q is small enough to stage.
-wait until availablethrust < 1.
-wait until verticalspeed < 260.
+wait until verticalspeed < 150.
 // Use the decouper as a ulage.
 stage.
-wait 0.6.
+wait 1.
 print "Seperation.".
 stage.
 
 // Seperate the payload, arm parachute.
-wait until altitude > 95e3.
+wait until verticalspeed < 0.
 stage.
 ag9 on.
-
-// Separate the top hat for parachute.
-wait until altitude < 25e3.
-stage.
 
 wait 10.
