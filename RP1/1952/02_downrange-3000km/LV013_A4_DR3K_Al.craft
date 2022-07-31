@@ -2,7 +2,7 @@ ship = LV013_A4_DR3K_Al
 version = 1.12.3
 description = 
 type = VAB
-size = 2.19759512,24.4070511,2.19759226
+size = 2.19759536,24.4060516,2.19759226
 steamPublishedFileId = 0
 persistentId = 1856206921
 rot = 0,0,0,0
@@ -16,8 +16,8 @@ PART
 {
 	part = ROT-GenericTank-Separate_4289717740
 	partName = Part
-	persistentId = 2046153555
-	pos = 0.426253855,28.0916176,-0.660500646
+	persistentId = 256747555
+	pos = 0.426253855,28.0911179,-0.660500646
 	attPos = -0.448042333,-27.8848572,0.487205684
 	attPos0 = 0.448042333,27.0370159,-0.487205684
 	rot = 0,1.00000012,0,0
@@ -35,14 +35,14 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 76.0600662
-	modMass = -0.939116955
+	modCost = 3.11940432
+	modMass = -0.931997836
 	modSize = 0,0,0
 	link = ROE-Aerobee_4290108738
 	link = sensorBarometer_4290875512
 	link = sensorThermometer_4290875466
-	attN = top,RP0aerobeeSounding_4288932438_0|0.969999969|0_0|1|0_0|0.969999969|0_0|1|0
-	attN = bottom,ROE-Aerobee_4290108738_0|-0.970000029|0_0|-1|0_0|-0.970000029|0_0|-1|0
+	attN = top,RP0aerobeeSounding_4288932438_0|0.970000029|0_0|1|0_0|0.970000029|0_0|1|0
+	attN = bottom,ROE-Aerobee_4290108738_0|-0.970000088|0_0|-1|0_0|-0.970000088|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -63,6 +63,36 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -72,9 +102,11 @@ PART
 		name = ModuleROTank
 		isEnabled = True
 		currentDiameter = 0.400000006
-		currentLength = 1.89999998
+		currentLength = 1.9000001
 		currentVScale = -0.0500000007
-		totalTankLength = 1.93999994
+		currentNoseVScale = 1
+		currentMountVScale = 1
+		totalTankLength = 1.94000006
 		largestDiameter = 0.400000006
 		currentNoseRotation = 0
 		currentMountRotation = 0
@@ -83,10 +115,10 @@ PART
 		currentCore = 5.0x-Kerolox
 		currentMount = Mount-Shroud-L
 		currentNoseTexture = default
-		currentCoreTexture = ROT-Kero-Silver
-		currentMountTexture = ROT-Mount-A
+		currentCoreTexture = ROT-Kero-Stripes6-Plain
+		currentMountTexture = ROT-Mount-B
 		noseModulePersistentData = 1,1,1,1,1,1;1,1,1,1,1,1;1,1,1,1,1,1
-		coreModulePersistentData = 0.7176471,0.7176471,0.7176471,0.6901961,1,1;0.7176471,0.7176471,0.7176471,0.6901961,1,1;0.5019608,0.5019608,0.5019608,0.6901961,1,1
+		coreModulePersistentData = 0.9254902,0.9254902,0.9254902,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.1254902,0,1;0.5019608,0.5019608,0.5019608,0.6901961,1,1
 		mountModulePersistentData = 0.9254902,0.9254902,0.9254902,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.1254902,0,1
 		stagingEnabled = True
 		EVENTS
@@ -260,12 +292,12 @@ PART
 	{
 		name = ModuleFuelTanks
 		isEnabled = True
-		type = Tank-Sep-Al-HP
-		utilization = 84
-		mass = 0.0608830228
+		type = Tank-Sep-Steel-HP
+		utilization = 75
+		volume = 175.86760000000001
+		mass = 0.068002142
 		_numberOfAddedMLILayers = 0
 		stagingEnabled = True
-		volume = 196.9717
 		EVENTS
 		{
 		}
@@ -277,42 +309,57 @@ PART
 			name = IRFNA-III
 			note = 
 			utilization = 1
-			mass = 0.000150000007
+			mass = 0.000159999996
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 300
 			fillable = True
 			techRequired = 
-			amount = 104.35631473514879
-			maxAmount = 104.35631473514879
+			amount = 93.175286689992745
+			maxAmount = 93.175286689992745
 		}
 		TANK
 		{
 			name = Aniline37
 			note = 
 			utilization = 1
-			mass = 0.000150000007
+			mass = 0.000159999996
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 300
 			fillable = True
 			techRequired = 
-			amount = 63.851797441057109
-			maxAmount = 63.851797441057109
+			amount = 57.01053690273703
+			maxAmount = 57.01053690273703
 		}
 		TANK
 		{
 			name = Nitrogen
 			note = 
 			utilization = 200
-			mass = 0.000150000007
+			mass = 0.000159999996
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 300
 			fillable = True
 			techRequired = 
-			amount = 5752.7175647588447
-			maxAmount = 5752.7175647588447
+			amount = 5136.3552814540481
+			maxAmount = 5136.3552814540481
 		}
 		UPGRADESAPPLIED
 		{
@@ -322,7 +369,7 @@ PART
 	{
 		name = ModuleToolingPTank
 		isEnabled = True
-		addedCost = 71.9680023
+		addedCost = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -352,8 +399,8 @@ PART
 	RESOURCE
 	{
 		name = Aniline37
-		amount = 63.851797441057109
-		maxAmount = 63.851797441057109
+		amount = 57.01053690273703
+		maxAmount = 57.01053690273703
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -363,8 +410,8 @@ PART
 	RESOURCE
 	{
 		name = IRFNA-III
-		amount = 104.35631473514879
-		maxAmount = 104.35631473514879
+		amount = 93.175286689992745
+		maxAmount = 93.175286689992745
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -374,8 +421,8 @@ PART
 	RESOURCE
 	{
 		name = Nitrogen
-		amount = 5752.7175647588447
-		maxAmount = 5752.7175647588447
+		amount = 5136.3552814540481
+		maxAmount = 5136.3552814540481
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -387,8 +434,8 @@ PART
 {
 	part = ROE-Aerobee_4290108738
 	partName = Part
-	persistentId = 2888276133
-	pos = 0.42763257,27.1402092,-0.661045015
+	persistentId = 3911350166
+	pos = 0.42763257,27.1397095,-0.661045015
 	attPos = -0.00137904251,0.193603754,0.000544446055
 	attPos0 = -5.13386222E-09,-1.14499998,-4.25179074E-08
 	rot = 1.59594573E-16,1.00000012,0,0
@@ -430,6 +477,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -664,9 +743,9 @@ PART
 		isEnabled = True
 		operatingTime = 0
 		lastMET = 0
-		currentFlightData = 692.812683
-		initialFlightData = 2528.57129
-		missionStartTime = 32031677.636170212
+		currentFlightData = 1717.60095
+		initialFlightData = 3544.98145
+		missionStartTime = 26846317.071902674
 		activeConfig = 
 		stagingEnabled = True
 		EVENTS
@@ -834,8 +913,8 @@ PART
 {
 	part = RP0aerobeeSounding_4288932438
 	partName = Part
-	persistentId = 3827162960
-	pos = 0.426253855,28.9394569,-0.660500646
+	persistentId = 3413424430
+	pos = 0.426253855,28.9389572,-0.660500646
 	attPos = 0,0,0
 	attPos0 = 0.426253855,28.9934559,-0.660500646
 	rot = 0,0.707106829,0,0.707106829
@@ -876,6 +955,36 @@ PART
 			wasActiveBeforePartWasAdjusted = False
 		}
 		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
 		{
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
@@ -1934,10 +2043,10 @@ PART
 {
 	part = sensorBarometer_4290875512
 	partName = Part
-	persistentId = 1996183172
-	pos = 0.5826931,28.7096519,-0.660500765
+	persistentId = 1094782520
+	pos = 0.582693219,28.7091522,-0.660500765
 	attPos = 0.0369149446,0,1.49011559E-08
-	attPos0 = -0.15643926,0.618034363,8.94069885E-08
+	attPos0 = -0.156439379,0.618034363,8.94069885E-08
 	rot = -2.10739604E-08,0.707105637,-2.10738857E-08,-0.70710814
 	attRot = 0,0,0,1
 	attRot0 = 2.10738804E-08,0.70710808,-2.1073955E-08,0.707105577
@@ -1975,6 +2084,42 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -2128,8 +2273,8 @@ PART
 {
 	part = sensorThermometer_4290875466
 	partName = Part
-	persistentId = 1721720724
-	pos = 0.249011219,28.7072411,-0.660500646
+	persistentId = 3746311390
+	pos = 0.249011233,28.7067413,-0.660500646
 	attPos = -0.0170879364,-0.0429611206,-1.49011559E-08
 	attPos0 = 0.177242741,0.615623474,2.98023295E-08
 	rot = 2.10729265E-08,-0.707105994,-2.10728732E-08,-0.707107782
@@ -2169,6 +2314,42 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -2322,8 +2503,8 @@ PART
 {
 	part = RO-RFTank-Seperate_4287101150
 	partName = Part
-	persistentId = 1418049489
-	pos = 0.426253855,29.9602966,-0.660500646
+	persistentId = 2381098915
+	pos = 0.426253855,29.9597969,-0.660500646
 	attPos = 0,0,0
 	attPos0 = 0,1.02083969,0
 	rot = 0,0.707106829,0,0.707106829
@@ -2341,7 +2522,7 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 2.54538369
+	modCost = 15.0841932
 	modMass = -0.971038878
 	modSize = 0,0,0
 	attN = top,Null_0_0|0.899999261|0_0|1|0_0|0.899999261|0_0|1|0
@@ -2362,6 +2543,36 @@ PART
 			wasActiveBeforePartWasAdjusted = False
 		}
 		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
 		{
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
@@ -2540,6 +2751,29 @@ PART
 	}
 	MODULE
 	{
+		name = ProceduralShapeHollowTruss
+		isEnabled = False
+		topDiameter = 1
+		bottomDiameter = 1.25
+		length = 0.5
+		rodDiameter = 0.125
+		nbRods = 12
+		tiltAngle = 10
+		offsetAngle = 0
+		symmetryRods = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = GeometryPartModule
 		isEnabled = True
 		stagingEnabled = True
@@ -2619,7 +2853,7 @@ PART
 		name = KSPTextureSwitch
 		isEnabled = True
 		currentTextureSet = Metal
-		persistentData = 0.9254902,0.9254902,0.9254902,0.6901961,1,1;0.1803922,0.1803922,0.1803922,0.6901961,1,1;0.9254902,0.9254902,0.9254902,0.1254902,0,1
+		persistentData = 0.9019608,0.8823529,0.8392157,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.6901961,1,1;0.9254902,0.9254902,0.9254902,0.1254902,0,1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2654,10 +2888,10 @@ PART
 		isEnabled = True
 		type = Tank-Sep-Steel-HP
 		utilization = 75
+		volume = 74.899500000000003
 		mass = 0.0289611444
 		_numberOfAddedMLILayers = 0
 		stagingEnabled = True
-		volume = 74.899500000000003
 		EVENTS
 		{
 		}
@@ -2672,6 +2906,11 @@ PART
 			mass = 0.000159999996
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 300
 			fillable = True
 			techRequired = 
@@ -2686,6 +2925,11 @@ PART
 			mass = 0.000159999996
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 300
 			fillable = True
 			techRequired = 
@@ -2700,6 +2944,11 @@ PART
 			mass = 0.000159999996
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 300
 			fillable = True
 			techRequired = 
@@ -2714,7 +2963,7 @@ PART
 	{
 		name = ModuleToolingPTank
 		isEnabled = True
-		addedCost = 0
+		addedCost = 12.5625
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2780,7 +3029,7 @@ PART
 	part = proceduralStackDecoupler_4291618962
 	partName = Part
 	persistentId = 3327560861
-	pos = 0.42763257,26.7900352,-0.661045015
+	pos = 0.42763257,26.7895355,-0.661045015
 	attPos = -8.14907253E-10,-0.0103740692,0
 	attPos0 = -1.08460425E-16,-0.339799881,0
 	rot = 0,0.707106888,0,0.707106888
@@ -2822,6 +3071,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -3161,7 +3442,7 @@ PART
 	part = RO-RFTank-Seperate_4289857630
 	partName = Part
 	persistentId = 2348347582
-	pos = 0.42763257,25.1400356,-0.661045015
+	pos = 0.42763257,25.1395359,-0.661045015
 	attPos = 0,0,0
 	attPos0 = 1.12390275E-08,-0.424999833,1.03811653E-08
 	rot = -1.3093393E-09,0.707106769,-1.32479427E-09,0.707107008
@@ -3179,8 +3460,8 @@ PART
 	sepI = 0
 	attm = 0
 	sameVesselCollision = False
-	modCost = 59.4915771
-	modMass = -0.762138665
+	modCost = 511.757141
+	modMass = -0.852379084
 	modSize = 0,0,0
 	link = proceduralAvionics_4289829602
 	attN = top,proceduralStackDecoupler_4291618962_0|1.60000002|0_0|1|0_0|1.60000002|0_0|1|0
@@ -3205,6 +3486,36 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -3217,7 +3528,7 @@ PART
 		textureSet = Original
 		capTextureIndex = 0
 		shapeName = Cone
-		moduleCost = 0.190200403
+		moduleCost = 0.198450983
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3379,6 +3690,29 @@ PART
 	}
 	MODULE
 	{
+		name = ProceduralShapeHollowTruss
+		isEnabled = False
+		topDiameter = 1
+		bottomDiameter = 1.25
+		length = 0.5
+		rodDiameter = 0.125
+		nbRods = 12
+		tiltAngle = 10
+		offsetAngle = 0
+		symmetryRods = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = GeometryPartModule
 		isEnabled = True
 		stagingEnabled = True
@@ -3458,7 +3792,7 @@ PART
 		name = KSPTextureSwitch
 		isEnabled = True
 		currentTextureSet = Metal
-		persistentData = 0.9254902,0.9254902,0.9254902,0.6901961,1,1;0.1803922,0.1803922,0.1803922,0.6901961,1,1;0.9254902,0.9254902,0.9254902,0.1254902,0,1
+		persistentData = 0.9019608,0.8823529,0.8392157,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.6901961,1,1;0.9254902,0.9254902,0.9254902,0.1254902,0,1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3491,12 +3825,12 @@ PART
 	{
 		name = ModuleFuelTanks
 		isEnabled = True
-		type = Tank-Sep-Steel
-		utilization = 83
-		mass = 0.23786132
+		type = Tank-Sep-Al
+		utilization = 87
+		volume = 1727.3735999999999
+		mass = 0.147620946
 		_numberOfAddedMLILayers = 0
 		stagingEnabled = True
-		volume = 1647.9540999999999
 		EVENTS
 		{
 		}
@@ -3508,42 +3842,57 @@ PART
 			name = LqdOxygen
 			note = 
 			utilization = 1
-			mass = 5.99999985E-05
+			mass = 3.9999999E-05
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.0025000000000000001
+			wallConduction = 16
+			insulationThickness = 0.01
+			insulationConduction = 0.02
+			isDewar = False
 			temperature = 90.1500015
 			fillable = True
 			techRequired = 
-			amount = 824.79287504954118
-			maxAmount = 824.79287504954118
+			amount = 864.54194193192404
+			maxAmount = 864.54194193192404
 		}
 		TANK
 		{
 			name = HTP
 			note = 
 			utilization = 1
-			mass = 5.99999985E-05
+			mass = 3.9999999E-05
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 300
 			fillable = True
 			techRequired = 
-			amount = 16.31637638518281
-			maxAmount = 16.31637638518281
+			amount = 17.102708027746779
+			maxAmount = 17.102708027746779
 		}
 		TANK
 		{
 			name = Ethanol90
 			note = 
 			utilization = 1
-			mass = 5.99999985E-05
+			mass = 3.9999999E-05
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 351.649994
 			fillable = True
 			techRequired = 
-			amount = 806.84484856527592
-			maxAmount = 806.84484856527592
+			amount = 845.7289500403291
+			maxAmount = 845.7289500403291
 		}
 		UPGRADESAPPLIED
 		{
@@ -3553,7 +3902,7 @@ PART
 	{
 		name = ModuleToolingPTank
 		isEnabled = True
-		addedCost = 39.2343826
+		addedCost = 486.800018
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3583,8 +3932,8 @@ PART
 	RESOURCE
 	{
 		name = Ethanol90
-		amount = 806.84484856527592
-		maxAmount = 806.84484856527592
+		amount = 845.7289500403291
+		maxAmount = 845.7289500403291
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -3594,8 +3943,8 @@ PART
 	RESOURCE
 	{
 		name = LqdOxygen
-		amount = 824.79287504954118
-		maxAmount = 824.79287504954118
+		amount = 864.54194193192404
+		maxAmount = 864.54194193192404
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -3605,8 +3954,8 @@ PART
 	RESOURCE
 	{
 		name = HTP
-		amount = 16.31637638518281
-		maxAmount = 16.31637638518281
+		amount = 17.102708027746779
+		maxAmount = 17.102708027746779
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -3637,12 +3986,12 @@ PART
 	sepI = 0
 	attm = 0
 	sameVesselCollision = False
-	modCost = 344.468872
-	modMass = -0.563266933
+	modCost = 1880.13843
+	modMass = -0.564330876
 	modSize = 0,0,0
 	link = ROT-GenericTank-Separate_4289972164
-	attN = top,RO-RFTank-Seperate_4289857630_0|0.325000018|0_0|1|0_0|0.325000018|0_0|1|0
-	attN = bottom,ROT-GenericTank-Separate_4289972164_0|-0.325000018|0_0|-1|0_0|-0.325000018|0_0|-1|0
+	attN = top,RO-RFTank-Seperate_4289857630_0|0.324113011|0_0|1|0_0|0.324113011|0_0|1|0
+	attN = bottom,ROT-GenericTank-Separate_4289972164_0|-0.324113011|0_0|-1|0_0|-0.324113011|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -3663,6 +4012,36 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -3675,7 +4054,7 @@ PART
 		textureSet = GreySide
 		capTextureIndex = 1
 		shapeName = Cylinder
-		moduleCost = 0.876148462
+		moduleCost = 0.874787569
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3692,7 +4071,7 @@ PART
 		name = ProceduralShapeCylinder
 		isEnabled = True
 		diameter = 1.30000007
-		length = 0.660000026
+		length = 0.659000039
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3916,7 +4295,7 @@ PART
 		name = KSPTextureSwitch
 		isEnabled = True
 		currentTextureSet = Metal
-		persistentData = 0.9254902,0.9254902,0.9254902,0.6901961,1,1;0.1803922,0.1803922,0.1803922,0.6901961,1,1;0.9254902,0.9254902,0.9254902,0.1254902,0,1
+		persistentData = 0.9019608,0.8823529,0.8392157,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.6901961,1,1;0.9254902,0.9254902,0.9254902,0.1254902,0,1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3940,82 +4319,6 @@ PART
 		}
 		ACTIONS
 		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFuelTanks
-		isEnabled = True
-		type = SM-I
-		utilization = 50
-		mass = 0.00139377953
-		_numberOfAddedMLILayers = 0
-		stagingEnabled = True
-		volume = 1.3089999999999999
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		TANK
-		{
-			name = ElectricCharge
-			note = 
-			utilization = 1000
-			mass = 0.00449999981
-			cost = 12
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 200
-			maxAmount = 200
-		}
-		TANK
-		{
-			name = LqdOxygen
-			note = 
-			utilization = 1
-			mass = 0.000280000007
-			cost = 0.00249999994
-			loss_rate = 0
-			temperature = 119.620003
-			fillable = True
-			techRequired = 
-			amount = 0.5550490140653439
-			maxAmount = 0.5550490140653439
-		}
-		TANK
-		{
-			name = HTP
-			note = 
-			utilization = 1
-			mass = 0.000280000007
-			cost = 0.00249999994
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 0.010980197452809964
-			maxAmount = 0.010980197452809964
-		}
-		TANK
-		{
-			name = Ethanol90
-			note = 
-			utilization = 1
-			mass = 0.000280000007
-			cost = 0.00249999994
-			loss_rate = 0
-			temperature = 351.649994
-			fillable = True
-			techRequired = 
-			amount = 0.5429707884818461
-			maxAmount = 0.5429707884818461
 		}
 		UPGRADESAPPLIED
 		{
@@ -4251,6 +4554,83 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = SM-I
+		utilization = 50
+		volume = 0.78539999999999999
+		mass = 0.000329867762
+		_numberOfAddedMLILayers = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = LqdOxygen
+			note = 
+			utilization = 1
+			mass = 0.000280000007
+			cost = 0.00249999994
+			loss_rate = 0
+			wallThickness = 0.0025000000000000001
+			wallConduction = 16
+			insulationThickness = 0.01
+			insulationConduction = 0.02
+			isDewar = True
+			temperature = 119.620003
+			fillable = True
+			techRequired = 
+			amount = 0.39308881483040681
+			maxAmount = 0.39308881483040681
+		}
+		TANK
+		{
+			name = HTP
+			note = 
+			utilization = 1
+			mass = 0.000280000007
+			cost = 0.00249999994
+			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 0.0077762372222154605
+			maxAmount = 0.0077762372222154605
+		}
+		TANK
+		{
+			name = Ethanol90
+			note = 
+			utilization = 1
+			mass = 0.000280000007
+			cost = 0.00249999994
+			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
+			temperature = 351.649994
+			fillable = True
+			techRequired = 
+			amount = 0.38453494794737758
+			maxAmount = 0.38453494794737758
 		}
 		UPGRADESAPPLIED
 		{
@@ -5276,20 +5656,9 @@ PART
 	}
 	RESOURCE
 	{
-		name = ElectricCharge
-		amount = 200
-		maxAmount = 200
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
 		name = Ethanol90
-		amount = 0.5429707884818461
-		maxAmount = 0.5429707884818461
+		amount = 0.38453494794737758
+		maxAmount = 0.38453494794737758
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -5299,8 +5668,8 @@ PART
 	RESOURCE
 	{
 		name = LqdOxygen
-		amount = 0.5550490140653439
-		maxAmount = 0.5550490140653439
+		amount = 0.39308881483040681
+		maxAmount = 0.39308881483040681
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -5310,8 +5679,8 @@ PART
 	RESOURCE
 	{
 		name = HTP
-		amount = 0.010980197452809964
-		maxAmount = 0.010980197452809964
+		amount = 0.0077762372222154605
+		maxAmount = 0.0077762372222154605
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -5324,7 +5693,7 @@ PART
 	part = ROT-GenericTank-Separate_4289972164
 	partName = Part
 	persistentId = 3350040362
-	pos = 0.42763257,16.1820335,-0.661045015
+	pos = 0.42763257,16.1825333,-0.661045015
 	attPos = 0,0,0
 	attPos0 = 5.53908919E-08,-7.04000044,-9.20738774E-09
 	rot = -6.17899021E-17,0.707106888,-9.24557902E-17,0.707106888
@@ -5342,7 +5711,7 @@ PART
 	sepI = 0
 	attm = 0
 	sameVesselCollision = False
-	modCost = 143.003525
+	modCost = 660.957336
 	modMass = 0.301629424
 	modSize = 0,0,0
 	link = RO-B9ProcWing-Early_4290428074
@@ -5372,6 +5741,36 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -5383,6 +5782,8 @@ PART
 		currentDiameter = 1.30000007
 		currentLength = 13.3000002
 		currentVScale = 0.278846145
+		currentNoseVScale = 1
+		currentMountVScale = 1
 		totalTankLength = 13.4300003
 		largestDiameter = 1.30000007
 		currentNoseRotation = 0
@@ -5392,11 +5793,11 @@ PART
 		currentCore = 8.0x-Kerolox
 		currentMount = Mount-Shroud-XL
 		currentNoseTexture = default
-		currentCoreTexture = ROT-Kero-Silver
-		currentMountTexture = ROT-Mount-A
+		currentCoreTexture = ROT-Kero-Stripes4-Stringers
+		currentMountTexture = ROT-Mount-C
 		noseModulePersistentData = 1,1,1,1,1,1;1,1,1,1,1,1;1,1,1,1,1,1
-		coreModulePersistentData = 0.7176471,0.7176471,0.7176471,0.6901961,1,1;0.7176471,0.7176471,0.7176471,0.6901961,1,1;0.5019608,0.5019608,0.5019608,0.6901961,1,1
-		mountModulePersistentData = 1,0.6235294,0,0.1254902,0,1;0.7176471,0.7176471,0.7176471,0.6901961,1,1;0.5019608,0.5019608,0.5019608,0.1254902,0,1
+		coreModulePersistentData = 0.9254902,0.9254902,0.9254902,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.1254902,0,1;0.5019608,0.5019608,0.5019608,0.6901961,1,1
+		mountModulePersistentData = 0.9254902,0.9254902,0.9254902,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.1254902,0,1;0.1803922,0.1803922,0.1803922,0.1254902,0,1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5571,10 +5972,10 @@ PART
 		isEnabled = True
 		type = Tank-Sep-Al
 		utilization = 87
+		volume = 15230.9031
 		mass = 1.30162942
 		_numberOfAddedMLILayers = 0
 		stagingEnabled = True
-		volume = 15230.9031
 		EVENTS
 		{
 		}
@@ -5589,6 +5990,11 @@ PART
 			mass = 3.9999999E-05
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.0025000000000000001
+			wallConduction = 16
+			insulationThickness = 0.01
+			insulationConduction = 0.02
+			isDewar = False
 			temperature = 90.1500015
 			fillable = True
 			techRequired = 
@@ -5603,6 +6009,11 @@ PART
 			mass = 3.9999999E-05
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 300
 			fillable = True
 			techRequired = 
@@ -5617,6 +6028,11 @@ PART
 			mass = 3.9999999E-05
 			cost = 0.00249999994
 			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
 			temperature = 351.649994
 			fillable = True
 			techRequired = 
@@ -5631,7 +6047,7 @@ PART
 	{
 		name = ModuleToolingPTank
 		isEnabled = True
-		addedCost = 0
+		addedCost = 519.536072
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5697,10 +6113,10 @@ PART
 	part = RO-B9ProcWing-Early_4290428074
 	partName = Part
 	persistentId = 2123859344
-	pos = -0.20543611,8.90248489,-0.693986297
+	pos = -0.205438972,8.90298462,-0.693986297
 	attPos = 8.45268369E-06,-1.33382225,-1.93715096E-05
 	attPos0 = 0.0329413489,-7.27954865,-0.633066535
-	rot = -9.99824721E-08,1.00000024,-1.57325175E-08,2.68220901E-07
+	rot = -9.99827279E-08,1.00000024,-1.5732585E-08,2.68220901E-07
 	attRot = 0,0,0,1
 	attRot0 = 6.08280502E-08,-0.707106471,6.28403996E-08,-0.707107127
 	mir = 1,1,1
@@ -5739,6 +6155,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -5958,10 +6406,10 @@ PART
 		isEnabled = True
 		type = Structural
 		utilization = 1
-		mass = 0.00335878343
+		volume = 0.090700000000000003
+		mass = 0
 		_numberOfAddedMLILayers = 0
 		stagingEnabled = True
-		volume = 0.090700000000000003
 		EVENTS
 		{
 		}
@@ -5993,7 +6441,7 @@ PART
 	part = RO-B9ProcWing-Early_4290422116
 	partName = Part
 	persistentId = 348750024
-	pos = 0.715644479,8.90248489,-0.0963044167
+	pos = 0.715646386,8.90298462,-0.096300602
 	attPos = -4.58955765E-06,-1.33389091,1.54972076E-06
 	attPos0 = -0.564737678,-7.27954865,0.288010329
 	rot = 6.36154667E-08,-0.500000238,-7.87206815E-08,0.866025448
@@ -6037,6 +6485,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -6254,10 +6734,10 @@ PART
 		isEnabled = True
 		type = Structural
 		utilization = 1
-		mass = 0.00335878343
+		volume = 0.090700000000000003
+		mass = 0
 		_numberOfAddedMLILayers = 0
 		stagingEnabled = True
-		volume = 0.090700000000000003
 		EVENTS
 		{
 		}
@@ -6289,10 +6769,10 @@ PART
 	part = RO-B9ProcWing-Early_4290421980
 	partName = Part
 	persistentId = 3401964813
-	pos = 0.772689104,8.90248489,-1.19283259
+	pos = 0.772690058,8.90298462,-1.19283545
 	attPos = 2.0802021E-05,-1.33384514,1.53183937E-05
 	attPos0 = 0.531785369,-7.27954865,0.345055908
-	rot = -3.63660035E-08,0.499999821,-9.44522611E-08,0.866025865
+	rot = -3.63659254E-08,0.499999821,-9.44520551E-08,0.866025865
 	attRot = 0,0,0,1
 	attRot0 = 2.28639294E-08,-0.258819431,-8.43939105E-08,0.965925694
 	mir = 1,1,1
@@ -6333,6 +6813,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -6550,10 +7062,10 @@ PART
 		isEnabled = True
 		type = Structural
 		utilization = 1
-		mass = 0.00335878343
+		volume = 0.090700000000000003
+		mass = 0
 		_numberOfAddedMLILayers = 0
 		stagingEnabled = True
-		volume = 0.090700000000000003
 		EVENTS
 		{
 		}
@@ -6585,7 +7097,7 @@ PART
 	part = ROE-RD100_4289887468
 	partName = Part
 	persistentId = 2869024627
-	pos = 0.4276326,7.26272964,-0.661045074
+	pos = 0.4276326,7.26322937,-0.661045074
 	attPos = -3.54580862E-08,0.0927228928,3.06167891E-09
 	attPos0 = 3.88824404E-08,-8.91930199,2.00634247E-08
 	rot = 1.92731364E-09,0.707107008,8.24324964E-09,0.707106769
@@ -6627,6 +7139,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -6943,9 +7487,9 @@ PART
 		isEnabled = True
 		operatingTime = 0
 		lastMET = 0
-		currentFlightData = 449.076294
-		initialFlightData = 449.076294
-		missionStartTime = 32031677.636170212
+		currentFlightData = 0
+		initialFlightData = 0
+		missionStartTime = 26846317.071902674
 		activeConfig = 
 		stagingEnabled = True
 		EVENTS
@@ -7114,7 +7658,7 @@ PART
 	part = ROE-MediumLC_4289834464
 	partName = Part
 	persistentId = 4246922952
-	pos = 0.42763266,5.26793098,-0.661045134
+	pos = 0.42763266,5.26843071,-0.661045134
 	attPos = 0,0,0
 	attPos0 = 3.26615108E-08,-1.99479866,3.61674459E-08
 	rot = 1.65886083E-09,0.707107008,8.68933725E-09,0.707106769
@@ -7156,6 +7700,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -7164,8 +7740,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 7.58058977
-		height = 6.06845665
+		scaleFactor = 7.58121395
+		height = 6.06895638
 		stagingEnabled = True
 		towerRot = -1.65886005E-09,-0.707106948,-8.68933459E-09,0.707106709
 		EVENTS
@@ -7330,12 +7906,12 @@ PART
 	part = conformaldecals-text_4286468186
 	partName = Part
 	persistentId = 490876371
-	pos = -0.300253868,19.2038994,-0.649457693
+	pos = -0.300589204,19.8883667,-0.661044717
 	attPos = 0,-0.1459198,-3.57627869E-07
-	attPos0 = -0.0115872668,3.02186584,-0.727884293
-	rot = 2.39329552E-07,-0.707106709,-2.33016522E-07,-0.707107067
+	attPos0 = -2.38302135E-07,3.70583344,-0.728220701
+	rot = 2.81476417E-07,-0.707106709,-2.7516333E-07,-0.707107067
 	attRot = 3.59758161E-08,-8.42937027E-08,4.46384973E-09,-1.00000012
-	attRot0 = 3.33999083E-07,2.68220845E-07,4.46398385E-09,-1
+	attRot0 = 3.93603699E-07,2.68220845E-07,4.46402648E-09,-1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -7372,6 +7948,42 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -7381,22 +7993,22 @@ PART
 		name = ModuleConformalText
 		isEnabled = True
 		vertical = True
-		lineSpacing = -11.5384665
-		charSpacing = -0.769218802
+		lineSpacing = -7.01519251
+		charSpacing = 5.3846302
 		fillEnabled = True
-		outlineEnabled = True
-		outlineWidth = 0.100000001
-		scale = 0.349999994
+		outlineEnabled = False
+		outlineWidth = 0.150000006
+		scale = 0.839999974
 		depth = 0.189999998
 		opacity = 1
 		cutoff = 0.400000006
 		wear = 100
 		projectMultiple = False
 		stagingEnabled = True
-		text = UNITED+STATES
+		text = USA
 		fontName = amarurgt SDF
 		style = 32
-		fillColor = #ffffffff
+		fillColor = #040404ff
 		outlineColor = #ffffffff
 		EVENTS
 		{
